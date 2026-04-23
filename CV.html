@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shevi Maisha - CV</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --text: #333;
+            --bg: #f4f4f4;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 { margin: 0; color: var(--primary); font-size: 2.5rem; text-transform: uppercase; }
+        .title { font-size: 1.2rem; color: var(--accent); font-weight: bold; }
+        .contact-info { text-align: right; font-size: 0.9rem; }
+        .contact-info p { margin: 2px 0; }
+        
+        h2 {
+            color: var(--primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+        
+        .job, .education { margin-bottom: 20px; }
+        .job-title { font-weight: bold; font-size: 1.1rem; }
+        .company { font-style: italic; color: #555; }
+        .date { float: right; color: #777; font-size: 0.9rem; }
+        
+        ul { margin-top: 5px; }
+        li { margin-bottom: 5px; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #eef2f5;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Print Styles - Ensures it looks good when saving as PDF */
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; width: 100%; max-width: 100%; }
+            a { text-decoration: none; color: black; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>Shevi Maisha</h1>
+                <div class="title">ICT Officer & Python Developer</div>
+            </div>
+            <div class="contact-info">
+                <p>📍 Tanzania</p>
+                <p> shevijeremiah@gmail.com</p>
+                <p>📱 +255 693 446 111</p>
+                <p> github.com/SHEVISANTOS</p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Dedicated ICT Officer and Python Developer with a Higher Diploma in Routing, Remote Access, and Linux Management. 
+                Proven experience in network monitoring, cybersecurity dashboards, and automated backup systems. 
+                CCNA certified professional with strong skills in Python, JavaScript, and Windows Server administration.
+            </p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="job">
+                <div class="job-title">ICT Officer <span class="date">2021 – Present</span></div>
+                <div class="company">Geita Town Council, Tanzania</div>
+                <ul>
+                    <li>Manage and maintain network infrastructure ensuring 99% uptime for council operations.</li>
+                    <li>Developed automated backup systems reducing data loss risks by 40%.</li>
+                    <li>Implemented cybersecurity dashboards to monitor network threats in real-time.</li>
+                    <li>Provide technical support and training to staff on ICT tools and security best practices.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">ICT Intern <span class="date">2020 – 2021</span></div>
+                <div class="company">Russeta Technologies</div>
+                <ul>
+                    <li>Assisted in network configuration and troubleshooting for client sites.</li>
+                    <li>Supported software deployment and hardware maintenance projects.</li>
+                    <li>Collaborated with senior engineers on routing and switching implementations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education">
+                <div class="job-title">Higher Diploma in Routing, Remote Access & Linux Management</div>
+                <div class="company">National Institute of Technology (NIT)</div>
+                <div class="date">Active Status</div>
+            </div>
+            <div class="education">
+                <div class="job-title">Diploma in Computer Science (Networking & Programming)</div>
+                <div class="company">Geita Town Council Institute</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>CCNA:</strong> Routing and Switching (Cisco Certified Network Associate)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Linux Management</span>
+                <span class="skill-tag">Windows Server</span>
+                <span class="skill-tag">Routing & Switching</span>
+                <span class="skill-tag">Network Monitoring</span>
+                <span class="skill-tag">Cybersecurity</span>
+                <span class="skill-tag">Automated Backups</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Soft Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Time Management</span>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
