@@ -435,15 +435,19 @@ span::after {
 }
  /* ===== Download CV Button ===== */
     .download-btn {
-        display: inline-block;
-        background-color: #2c3e50;
-        color: white;
-        padding: 12px 24px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background 0.3s, transform 0.2s;
-        border: 2px solid #2c3e50;
+       display: inline-block;
+    padding: 14px 40px;
+    border-radius: 0.5rem;
+    font-size: 17px;
+    font-weight: 600;
+    background: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(235, 74, 74, 0.4);
     }
 
     .download-btn:hover {
