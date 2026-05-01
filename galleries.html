@@ -3,135 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shevi Santos' galleries</title>
-	 <link rel="icon" type="image/png" href="./image/icon2.png">
+    <title>Shevi Santos – Gallery</title>
+    <link rel="icon" type="image/png" href="./image/icon2.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="./style/style1.css">
     <link rel="stylesheet" href="./style/boxicons.min.css">
-    <link href="./style/css2.css" rel="stylesheet">
-    <link href="./style/css2(1).css" rel="stylesheet">
-    <script src="./scripts/scrollreveal.js"></script>
-    <script type="text/javascript" src="./scripts/script.js"></script>
-    
-    
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style/style1.css">
+
+    <!-- Scripts -->
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
 
-    <!-- Navigation -->
-   <nav class="main-nav">
+<!-- ===== NAVIGATION ===== -->
+<nav class="main-nav" id="mainNav">
     <div class="nav-container">
         <a href="Index.html" class="logo">Portfo<span>lio</span></a>
-        
-        <!-- Hamburger Button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <!-- Your Navigation Links (Fixed for cross-page compatibility) -->
-        <ul class="navbar" id="navMenu">
+        <ul class="navbar" id="navMenu" role="navigation">
             <li><a href="Index.html#home">Home</a></li>
             <li><a href="Index.html#about">About Me</a></li>
             <li><a href="Index.html#experience">Experience</a></li>
             <li><a href="Index.html#skills">Skills</a></li>
             <li><a href="Index.html#achievement">Achievements</a></li>
             <li><a href="Index.html#portfolio">Projects</a></li>
-            <li><a href="Index.html#POR">Positions & Responsibilities</a></li>
-            <li><a href="galleries.html">Photos & Videos</a></li>
+            <li><a href="Index.html#POR">Positions</a></li>
+            <li><a href="galleries.html" class="active">Gallery</a></li>
             <li><a href="Index.html#contact">Contact</a></li>
             <li><a href="Index.html#tools">Tools</a></li>
         </ul>
     </div>
 </nav>
-    <!-- Photos and Videos Section -->
-    <section class="photos-section">
-        <div class="section-header">
-            <h2>Photos and Videos</h2>
-            <button class="btn btn-primary" onclick="scrollToTop()">Back to Top ↑</button>
-        </div>
 
-        <div class="gallery-grid" id="galleryGrid">
-            <!-- Photo 1 -->
-            <div class="gallery-item">
-                <img src="Gallery/1.jpg" alt="Project Photo 1">
-                <div class="gallery-overlay">
-                    <h3>Project Title 1</h3>
-                    <p>Network Infrastructure Setup</p>
-                </div>
-            </div>
-
-            <!-- Photo 2 -->
-            <div class="gallery-item">
-                <img src="Gallery/2.avif" alt="Project Photo 2">
-                <div class="gallery-overlay">
-                    <h3>Project Title 2</h3>
-                    <p>Server Configuration</p>
-                </div>
-            </div>
-
-            <!-- Photo 3 -->
-            <div class="gallery-item">
-                <img src="Gallery/3.jpg" alt="Project Photo 3">
-                <div class="gallery-overlay">
-                    <h3>Project Title 3</h3>
-                    <p>Network Security Implementation</p>
-                </div>
-            </div>
-
-            <!-- Photo 4 -->
-            <div class="gallery-item">
-                <img src="Gallery/4.webp" alt="Project Photo 4">
-                <div class="gallery-overlay">
-                    <h3>Project Title 4</h3>
-                    <p>Cloud Migration Project</p>
-                </div>
-            </div>
-
-            <!-- Photo 5 -->
-            <div class="gallery-item">
-                <img src="Gallery/5.jpg" alt="Project Photo 5">
-                <div class="gallery-overlay">
-                    <h3>Project Title 5</h3>
-                    <p>System Administration</p>
-                </div>
-            </div>
-
-            <!-- Photo 6 -->
-            <div class="gallery-item">
-                <img src="Gallery/6.jpg" alt="Project Photo 6">
-                <div class="gallery-overlay">
-                    <h3>Project Title 6</h3>
-                    <p>Technical Documentation</p>
-                </div>
-            </div>
-
-            <!-- Photo 7 -->
-            <div class="gallery-item">
-                <img src="Gallery/7.jpg" alt="Project Photo 7">
-                <div class="gallery-overlay">
-                    <h3>Project Title 7</h3>
-                    <p>Team Collaboration</p>
-                </div>
-            </div>
-
-            <!-- Photo 8 -->
-            <div class="gallery-item">
-                <img src="Gallery/8.jpg" alt="Project Photo 8">
-                <div class="gallery-overlay">
-                    <h3>Project Title 8</h3>
-                    <p>Training & Workshops</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <div class="lightbox-content" id="lightboxContent">
-            <!-- Content will be inserted here -->
-        </div>
+<!-- ===== GALLERY SECTION ===== -->
+<main class="photos-section">
+    <div class="section-header">
+        <h2>Photos &amp; Videos</h2>
+        <button class="btn btn-primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <i class="fas fa-arrow-up" style="margin-right:6px;"></i>Back to Top
+        </button>
     </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item">
+            <img src="Gallery/1.jpg" alt="Network Infrastructure Setup" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 1</h3>
+                <p>Network Infrastructure Setup</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/2.avif" alt="Server Configuration" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 2</h3>
+                <p>Server Configuration</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/3.jpg" alt="Network Security Implementation" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 3</h3>
+                <p>Network Security Implementation</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/4.webp" alt="Cloud Migration Project" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 4</h3>
+                <p>Cloud Migration Project</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/5.jpg" alt="System Administration" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 5</h3>
+                <p>System Administration</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/6.jpg" alt="Technical Documentation" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 6</h3>
+                <p>Technical Documentation</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/7.jpg" alt="Team Collaboration" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 7</h3>
+                <p>Team Collaboration</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Gallery/8.jpg" alt="Training and Workshops" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Project 8</h3>
+                <p>Training &amp; Workshops</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <span class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</span>
+    <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2026 Shevi Santos. All rights reserved.</p>
+</footer>
+
 </body>
 </html>

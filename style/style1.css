@@ -214,6 +214,15 @@ span::after {
     border-radius: 2px;
 }
 
+/* Hamburger spans must not inherit red color or underline */
+.hamburger span {
+    color: unset;
+    position: static;
+}
+.hamburger span::after {
+    display: none;
+}
+
 .home-text h4 {
     color: var(--main-color);
     font-size: 24px;
@@ -1756,4 +1765,393 @@ body.menu-open {
 /* Prevent body scroll when menu is open */
 body.menu-open {
     overflow: hidden;
+}
+/* ============================================================
+   RESPONSIVE ADDITIONS — preserves all existing styles above
+   ============================================================ */
+
+/* Make the nav hamburger work at the right breakpoint */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(8.75px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.active span:nth-child(3) { transform: translateY(-8.75px) rotate(-45deg); }
+
+/* Fix contact section — use the .container div that's actually in the HTML */
+.contact .container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Fix main-text missing from contact */
+.contact .main-text {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Tools grid responsive base */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 20px;
+}
+.tool-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: var(--transition);
+}
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(235,74,74,0.35);
+    box-shadow: 0 10px 30px rgba(235,74,74,0.2);
+}
+.tool-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+    border-radius: 6px;
+    display: block;
+}
+.tool-card span {
+    display: block;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+}
+
+/* Photos & Videos section on Index */
+.section {
+    padding: 100px 16% 60px;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+.photos-preview {
+    text-align: center;
+    padding-top: 1rem;
+}
+.btn-primary {
+    background: var(--main-color);
+    color: white;
+    box-shadow: 0 5px 20px rgba(235,74,74,0.4);
+}
+
+/* main-text h4 styling */
+.main-text h4 {
+    color: var(--second-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* ---- TABLET (≤900px) ---- */
+@media (max-width: 900px) {
+    .hamburger { display: flex; }
+
+    header { padding: 14px 5%; }
+    header.sticky { padding: 12px 5%; }
+
+    section { padding: 120px 5% 60px; }
+    .about { padding: 80px 5%; flex-direction: column; align-items: center; text-align: center; gap: 40px; }
+    .about-img { flex: none; width: 280px; }
+    .about-text h2::after { left: 50%; transform: translateX(-50%); }
+    .about-gri { grid-template-columns: 1fr; }
+
+    .contact { padding: 80px 5%; }
+    .contact .container { grid-template-columns: 1fr; gap: 30px; }
+
+    .section { padding: 80px 5% 40px; }
+
+    .portfolio-content { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .experience-content { flex-direction: column; }
+
+    .tools-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+
+/* ---- MOBILE (≤600px) ---- */
+@media (max-width: 600px) {
+    :root {
+        --h1-font: 2.8rem;
+        --h2-font: 2rem;
+        --p-font: 1rem;
+    }
+
+    header { padding: 12px 4%; }
+
+    section { padding: 100px 4% 50px; }
+    .about { padding: 60px 4%; }
+    .contact { padding: 60px 4%; }
+    .section { padding: 60px 4% 30px; }
+
+    .home-text h1 { font-size: 2.4rem; }
+    .home-text h3 { font-size: 1rem; }
+
+    .portfolio-content { grid-template-columns: 1fr; }
+    .skills-content { grid-template-columns: 1fr; }
+    .Tcontainer { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+    .contact-info { padding: 25px 20px; }
+    .contact-form { padding: 25px 20px; }
+
+    .tools-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+    .gallery-grid { grid-template-columns: 1fr; }
+
+    .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .section-header h2 { font-size: 1.8rem; }
+
+    .top { bottom: 1.2rem; right: 1.2rem; }
+    .top i { padding: 12px; font-size: 18px; }
+}
+
+/* ---- SMALL PHONES (≤400px) ---- */
+@media (max-width: 400px) {
+    .Tcontainer { grid-template-columns: repeat(2, 1fr); }
+    .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    .home-text h1 { font-size: 2rem; }
+}
+
+/* ============================================================
+   FINAL MOBILE NAV FIX — single authoritative block
+   ============================================================ */
+@media (max-width: 900px) {
+
+    /* Fix header padding */
+    header {
+        padding: 16px 5% !important;
+    }
+    header.sticky {
+        padding: 13px 5% !important;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex !important;
+    }
+
+    /* Navbar: hidden by default, slides down when .active */
+    .navbar {
+        position: fixed !important;
+        top: 62px !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-height: calc(100vh - 62px) !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        scrollbar-width: none !important;
+        background: rgba(2, 3, 18, 0.99) !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 8px 0 16px !important;
+        gap: 0 !important;
+        /* Hidden state */
+        transform: translateY(-110%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s !important;
+        border-bottom: 2px solid rgba(235, 74, 74, 0.25) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+        z-index: 998 !important;
+    }
+    .navbar::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Shown state */
+    .navbar.active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    .navbar li {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+
+    .navbar li a {
+        display: block !important;
+        padding: 15px 25px !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+        border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+        border-radius: 0 !important;
+        transform: none !important;
+        transition: background 0.2s, color 0.2s !important;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        background: rgba(235, 74, 74, 0.12) !important;
+        color: #eb4a4a !important;
+    }
+}
+
+/* ============================================================
+   CONTACT LAYOUT FIX — .container inside .contact
+   PC: side by side | Mobile: stacked
+   ============================================================ */
+
+/* Desktop: 2 columns side by side */
+.contact .container {
+    display: grid !important;
+    grid-template-columns: 1fr 1.6fr !important;
+    gap: 40px !important;
+    align-items: start !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Tablet & Mobile: single column stacked */
+@media (max-width: 900px) {
+    .contact .container {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+/* ============================================================
+   CONTACT — always single column stacked (all screen sizes)
+   ============================================================ */
+.contact .container {
+    display: block !important;
+    max-width: 960px !important;
+    margin: 0 auto !important;
+}
+
+.contact-info {
+    margin-bottom: 30px !important;
+}
+
+/* ===== TOOL CARD GLOW ON HOVER ===== */
+.tool-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: var(--main-color) !important;
+    box-shadow: 0 0 18px rgba(235, 74, 74, 0.7),
+                0 0 40px rgba(235, 74, 74, 0.35) !important;
+}
+
+/* ===== RED GLOW ON ALL CARDS/BOXES ===== */
+.box:hover,
+.row:hover,
+.skill-box:hover,
+.about-in:hover,
+.gallery-item:hover {
+    box-shadow: 0 0 18px rgba(235, 74, 74, 0.7),
+                0 0 40px rgba(235, 74, 74, 0.35) !important;
+    border-color: var(--main-color) !important;
+}
+
+/* ============================================================
+   UX AUDIT FIXES
+   ============================================================ */
+
+/* 1. Fix row images overflowing at width:150% */
+.row img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+/* 2. Reduce excessive section spacing */
+section {
+    padding-top: 100px !important;
+    padding-bottom: 70px !important;
+}
+.about { padding-top: 80px !important; }
+
+/* 3. Fix contact info link colors — contrast failure */
+.contact-info a,
+.contact-info span {
+    color: var(--text-color) !important;
+}
+.info-item:hover a,
+.info-item:hover span {
+    color: var(--main-color) !important;
+}
+
+/* 4. Visible focus outlines for accessibility */
+input:focus,
+textarea:focus,
+button:focus,
+a:focus {
+    outline: 2px solid var(--main-color) !important;
+    outline-offset: 2px !important;
+}
+
+/* 5. Better active nav link — underline instead of filled background */
+.navbar a.active {
+    background: transparent !important;
+    color: var(--main-color) !important;
+    border-bottom: 2px solid var(--main-color) !important;
+}
+
+/* 6. Fix experience content — both boxes in same grid */
+.experience-content {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 2.5rem !important;
+    margin-top: 3rem !important;
+}
+
+/* 7. Scroll progress bar at top of page */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--main-color);
+    z-index: 9999;
+    width: 0%;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 8px rgba(235,74,74,0.7);
+}
+
+/* 8. Mobile nav — tighter item height */
+@media (max-width: 900px) {
+    .navbar li a {
+        padding: 13px 25px !important;
+        font-size: 0.98rem !important;
+    }
+}
+
+/* 9. Skill boxes — constrain image height */
+.box img {
+    height: 180px !important;
+    width: 100% !important;
+    object-fit: contain !important;
 }
