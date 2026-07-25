@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Networking Academy Certificate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@400;700;800&family=Reenie+Beanie&display=swap');
+
+        body {
+            background-color: #e4e4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #222;
+        }
+
+        .cert-container {
+            width: 1000px;
+            height: 700px;
+            background-color: #fffdf9; /* Soft parchment-white */
+            padding: 24px;
+            box-sizing: border-box;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        /* Distinctive dark-bronze outer border style */
+        .outer-border {
+            border: 8px solid #4a443a; 
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Header Section Grid --- */
+        .header-grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            border-bottom: 2px solid #4a443a;
+            width: 100%;
+        }
+
+        /* Left Logo Panel */
+        .logo-panel {
+            border-right: 2px solid #4a443a;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+        .logo-text-red {
+            color: #d32f2f;
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .logo-graphic-mock {
+            width: 160px;
+            height: 50px;
+            background-color: #005c73; /* Classic teal-blue banner background */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 22px;
+            font-weight: bold;
+            padding-bottom: 4px;
+            letter-spacing: 2px;
+        }
+
+        /* Right Title Panel */
+        .title-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .main-academy-title {
+            font-size: 38px;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #111;
+            padding: 10px 0 5px 0;
+        }
+        .sub-track-title {
+            border-top: 2px solid #4a443a;
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            text-align: center;
+            padding: 6px 0;
+            background-color: #fffdf9;
+            color: #333;
+        }
+
+        /* --- Certificate Body Core Content --- */
+        .cert-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 45px;
+            flex-grow: 1;
+        }
+
+        .cisco-systems-text {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: #444;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .certifies-text {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #444;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+        }
+
+        .recipient-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e53935; /* Crisp red accent for the name */
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        .role-title-top {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .role-title-bottom {
+            font-family: 'Cinzel', serif;
+            font-size: 34px;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        /* --- Footer Layout Section --- */
+        .cert-footer {
+            margin-top: auto;
+            border-top: 1px solid #aaa;
+            padding: 15px 25px 25px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .footer-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        /* Left Side: Joining Info & Executive Signatures */
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        .date-container {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .sig-block {
+            margin-top: 10px;
+            position: relative;
+        }
+        .handwritten-sig {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 36px;
+            color: #0f1a5c;
+            position: absolute;
+            top: -25px;
+            left: 10px;
+        }
+        .sig-line {
+            border-top: 1px solid #777;
+            width: 160px;
+            margin-top: 20px;
+        }
+        .sig-title {
+            font-size: 9px;
+            font-weight: 700;
+            color: #555;
+            text-transform: uppercase;
+            margin-top: 3px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Right Side: Regional Director Sign-off & Stamp */
+        .footer-right {
+            text-align: left;
+            width: 380px;
+            position: relative;
+        }
+        .director-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #111;
+            margin-top: 30px;
+        }
+        .director-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        /* Decorative Light Blue Stamp Replication */
+        .certified-stamp-mock {
+            position: absolute;
+            right: 40px;
+            top: -65px;
+            width: 105px;
+            height: 105px;
+            border: 2px dashed rgba(4, 159, 217, 0.45);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 9px;
+            color: rgba(4, 159, 217, 0.6);
+            font-weight: bold;
+            transform: rotate(-12deg);
+            text-align: center;
+            pointer-events: none;
+        }
+        .stamp-inner {
+            border: 1px solid rgba(4, 159, 217, 0.4);
+            width: 91px;
+            height: 91px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Bottom edge tiny labels */
+        .bottom-bar-labels {
+            position: absolute;
+            bottom: 4px;
+            left: 8px;
+            right: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 7px;
+            color: #666;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cert-container">
+        <div class="outer-border">
+            
+            <div class="header-grid">
+                <div class="logo-panel">
+                    <div class="logo-text-red">CISCO SYSTEMS</div>
+                    <div class="logo-graphic-mock">_|||||_</div>
+                </div>
+                <div class="title-panel">
+                    <div class="main-academy-title">CISCO NETWORKING ACADEMY</div>
+                    <div class="sub-track-title">Routing and Switching</div>
+                </div>
+            </div>
+
+            <div class="cert-body">
+                <div class="cisco-systems-text">Cisco Systems</div>
+                <div class="certifies-text">Certifies</div>
+                
+                <div class="recipient-name">Alireza Tavakoli Saraji</div>
+                
+                <div class="role-title-top">As a Registered</div>
+                <div class="role-title-bottom">Network Administrator</div>
+            </div>
+
+            <div class="cert-footer">
+                
+                <div class="footer-left">
+                    <div class="date-container">
+                        Date of Joining: 19/2/06
+                    </div>
+                    
+                    <div class="sig-block" style="margin-bottom: 15px;">
+                        <div class="handwritten-sig" style="font-family: sans-serif; font-size: 16px; font-weight: bold; top:-10px; color:#333;">ll s.</div>
+                        <div class="sig-line"></div>
+                        <div class="sig-title">Program Manager</div>
+                    </div>
+
+                    <div class="sig-block">
+                        <div class="handwritten-sig">John Chambers</div>
+                        <div class="sig-line"></div>
+                        <div class="sig-title">President and CEO</div>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-label">Signed for and on behalf of Cisco Systems Inc</div>
+                    
+                    <div class="certified-stamp-mock">
+                        <div class="stamp-inner">
+                            <div>CISCO<br>NETWORKING<br>ACADEMY</div>
+                        </div>
+                    </div>
+
+                    <div class="director-name">Jacek Murawski</div>
+                    <div class="director-title">Director, Cisco Networking Academy Program<br>Europe, Middle East & Africa</div>
+                </div>
+
+            </div>
+
+            <div class="bottom-bar-labels">
+                <div>CISCO CERTIFICATION</div>
+                <div>Original is printed on watermarked paper. Do not duplicate.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

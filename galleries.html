@@ -3,157 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shevi Santos - Photo and Video Gallery showcasing projects and work">
-    <meta name="theme-color" content="#0a0a12">
+    <meta name="description" content="Shevi Santos - Work Gallery. Visual documentation of network topology, hardware assemblies, servers, and workshops.">
+    <meta name="theme-color" content="#050507">
     
-    <title>Shevi Santos – Gallery</title>
+    <title>Shevi Santos | Work Gallery</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./image/icon2.png">
-    <link rel="apple-touch-icon" href="./image/icon2.png">
-    
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./style/boxicons.min.css">
     
-    <!-- Styles -->
-    <link rel="stylesheet" href="./style/style1.css">
+    <!-- Premium Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./style/style1.css">
     
-    <!-- Scripts -->
+    <!-- Core Portfolio Scripts -->
     <script src="./scripts/script.js" defer></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5802189302392016"
-     crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Skip Navigation -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link" style="position: absolute; top: -100px; left: 10px; background: var(--accent-gold); color: var(--bg-dark); padding: 10px 20px; z-index: 1005; transition: top 0.2s;" onfocus="this.style.top='10px'" onblur="this.style.top='-100px'">Skip to main content</a>
     
-    <!-- Scroll Progress Bar -->
-    <div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Page scroll progress"></div>
-    
-    <!-- ===== HEADER / NAVIGATION ===== -->
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Page reading progress"></div>
+
+    <!-- Custom Luxury Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
     <header class="sticky">
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="Index.html" class="logo" aria-label="Portfolio Home">
-                    Portfo<span>lio</span>
-                </a>
+        <div class="container">
+            <nav class="main-nav" aria-label="Main Navigation">
+                <a href="Index.html" class="logo" aria-label="Shevi Santos Home">SANTOS<span>.</span></a>
                 
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <!-- Accessible Mobile Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                
+
+                <!-- Navigation Links -->
                 <ul class="navbar" id="navMenu" role="menubar">
                     <li role="none"><a href="Index.html#home" role="menuitem">Home</a></li>
-                    <li role="none"><a href="Index.html#about" role="menuitem">About Me</a></li>
+                    <li role="none"><a href="Index.html#about" role="menuitem">About</a></li>
                     <li role="none"><a href="Index.html#experience" role="menuitem">Experience</a></li>
                     <li role="none"><a href="Index.html#skills" role="menuitem">Skills</a></li>
                     <li role="none"><a href="Index.html#achievement" role="menuitem">Achievements</a></li>
                     <li role="none"><a href="Index.html#portfolio" role="menuitem">Projects</a></li>
                     <li role="none"><a href="Index.html#POR" role="menuitem">Positions</a></li>
-                    <li role="none"><a href="galleries.html" class="active" role="menuitem" aria-current="page">Gallery</a></li>
-                    <li role="none"><a href="Index.html#contact" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="galleries.html" role="menuitem" class="active">Gallery</a></li>
                     <li role="none"><a href="Index.html#tools" role="menuitem">Tools</a></li>
+                    <li role="none"><a href="Index.html#contact" role="menuitem">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
-    
+
     <!-- ===== MAIN CONTENT ===== -->
     <main id="main-content" class="photos-section">
-        <div class="section-header">
-            <h2 class="section-title">Photos & Videos</h2>
-            <button class="btn btn-primary" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top of gallery">
-                <i class="fas fa-arrow-up" aria-hidden="true"></i>Back to Top
-            </button>
-        </div>
-        
-        <div class="gallery-grid" id="galleryGrid" role="list" aria-label="Project gallery">
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 1: Network Infrastructure Setup">
-                <img src="Gallery/1.jpg" alt="Network Infrastructure Setup" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 1</h3>
-                    <p>Network Infrastructure Setup</p>
-                </div>
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="text-gold">Work Gallery</h2>
+                <a href="Index.html" class="btn btn-secondary" aria-label="Return to portfolio homepage">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
             </div>
             
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 2: Server Configuration">
-                <img src="Gallery/2.avif" alt="Server Configuration" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 2</h3>
-                    <p>Server Configuration</p>
+            <div class="gallery-grid" id="galleryGrid" role="list" aria-label="Visual project logs">
+                <!-- Item 1 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 1: Enterprise Network Setup">
+                    <img src="Gallery/1.jpg" alt="Enterprise core switches and patch panel cabling setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 1</h3>
+                        <p>Enterprise Network Setup</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 3: Network Security Implementation">
-                <img src="Gallery/3.jpg" alt="Network Security Implementation" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 3</h3>
-                    <p>Network Security Implementation</p>
+                
+                <!-- Item 2 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 2: Core Server Integration">
+                    <img src="Gallery/2.avif" alt="Rackmount server chassis configuration and status lights" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 2</h3>
+                        <p>Core Server Integration</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 4: Cloud Migration Project">
-                <img src="Gallery/4.webp" alt="Cloud Migration Project" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 4</h3>
-                    <p>Cloud Migration Project</p>
+                
+                <!-- Item 3 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 3: Firewall Audits">
+                    <img src="Gallery/3.jpg" alt="System administrator screen showing real-time security logs" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 3</h3>
+                        <p>Network Security &amp; Firewall Audits</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 5: System Administration">
-                <img src="Gallery/5.jpg" alt="System Administration" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 5</h3>
-                    <p>System Administration</p>
+                
+                <!-- Item 4 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 4: Distributed Cloud Clusters">
+                    <img src="Gallery/4.webp" alt="Distributed systems architecture nodes graph visualization" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 4</h3>
+                        <p>Distributed Cloud Clusters</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 6: Technical Documentation">
-                <img src="Gallery/6.jpg" alt="Technical Documentation" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 6</h3>
-                    <p>Technical Documentation</p>
+                
+                <!-- Item 5 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 5: System Admin Operations">
+                    <img src="Gallery/5.jpg" alt="DevOps dashboard monitoring server container metrics" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 5</h3>
+                        <p>System Admin Operations</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 7: Team Collaboration">
-                <img src="Gallery/7.jpg" alt="Team Collaboration" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 7</h3>
-                    <p>Team Collaboration</p>
+                
+                <!-- Item 6 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 6: Architectural Layout Maps">
+                    <img src="Gallery/6.jpg" alt="Network topology schematic diagrams and floor cabling maps" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 6</h3>
+                        <p>Architectural Layout Maps</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="gallery-item" role="listitem" tabindex="0" aria-label="Project 8: Training and Workshops">
-                <img src="Gallery/8.jpg" alt="Training and Workshops" loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Project 8</h3>
-                    <p>Training &amp; Workshops</p>
+                
+                <!-- Item 7 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 7: Active Collaborations">
+                    <img src="Gallery/7.jpg" alt="Engineering team group whiteboard brainstorming session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 7</h3>
+                        <p>Active Collaborations</p>
+                    </div>
+                </div>
+                
+                <!-- Item 8 -->
+                <div class="gallery-item glass-panel reveal" role="listitem" tabindex="0" aria-label="Project 8: Hands-On Tech Seminars">
+                    <img src="Gallery/8.jpg" alt="ICT officer training class and hardware demonstration session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Project 8</h3>
+                        <p>Hands-On Tech Seminars</p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    
-    <!-- ===== LIGHTBOX ===== -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" tabindex="-1">
-        <span class="lightbox-close" id="lightboxClose" aria-label="Close viewer" role="button" tabindex="0">&times;</span>
+
+    <!-- ===== LIGHTBOX COMPONENT ===== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox viewer" tabindex="-1">
+        <span class="lightbox-close" id="lightboxClose" aria-label="Close image viewer" role="button" tabindex="0">&times;</span>
         <div class="lightbox-content" id="lightboxContent"></div>
     </div>
     
     <!-- ===== FOOTER ===== -->
-    <footer role="contentinfo">
-        <p>&copy; 2026 Shevi Santos. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Shevi Santos. All rights reserved.</p>
+                <div style="font-family: var(--font-heading); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dark);">
+                    Designed for Visionaries
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <div class="top" id="backToTop">
+        <button class="top-btn" aria-label="Back to top of page"><i class="fas fa-arrow-up"></i></button>
+    </div>
+
 </body>
 </html>

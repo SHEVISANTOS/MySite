@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shevi Santos — CV</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      padding: 2.5rem 1rem;
+      color: #1a1a1a;
+    }
+
+    .cv {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    /* ── Header ── */
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid #185FA5;
+      margin-bottom: 1.75rem;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #0f2942;
+      line-height: 1.1;
+    }
+
+    .role-tag {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      background: #E6F1FB;
+      color: #0C447C;
+      border-radius: 6px;
+    }
+
+    .contact {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding-top: 4px;
+    }
+
+    .contact a,
+    .contact span {
+      font-size: 13px;
+      color: #555;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    .contact a:hover { color: #185FA5; }
+    .contact i { font-size: 14px; color: #185FA5; }
+
+    /* ── Section titles ── */
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #185FA5;
+      margin-bottom: 1rem;
+      padding-bottom: 5px;
+      border-bottom: 0.5px solid #d5e3f0;
+    }
+
+    section { margin-bottom: 1.75rem; }
+
+    /* ── Summary ── */
+    .summary {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #444;
+      text-align: justify;
+    }
+    
+    .summary strong {
+      color: #0C447C;
+    }
+
+    /* ── Jobs ── */
+    .job { margin-bottom: 1.25rem; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f2942;
+    }
+
+    .job-date {
+      font-size: 12px;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    .job-org {
+      font-size: 13px;
+      color: #185FA5;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .job ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .job li {
+      font-size: 13.5px;
+      color: #444;
+      line-height: 1.65;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .job li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #185FA5;
+    }
+
+    /* ── Two-column layout ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    /* ── Cert cards ── */
+    .cert-card {
+      border: 0.5px solid #d5e3f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .cert-card:last-child { margin-bottom: 0; }
+    .cert-card i { font-size: 18px; color: #185FA5; flex-shrink: 0; margin-top: 1px; }
+
+    .cert-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f2942;
+      line-height: 1.3;
+    }
+
+    .cert-body {
+      font-size: 12px;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    /* ── Enrolled badge ── */
+    .enrolled {
+      font-size: 12px;
+      color: #555;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .enrolled i { font-size: 13px; color: #185FA5; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 8px;
+    }
+
+    .skill {
+      font-size: 12px;
+      font-weight: 600;
+      color: #0C447C;
+      background: #E6F1FB;
+      border-radius: 6px;
+      padding: 6px 12px;
+      text-align: center;
+    }
+
+    /* ── Soft skills ── */
+    .soft-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .soft {
+      font-size: 12.5px;
+      color: #444;
+      border: 0.5px solid #cdd9e5;
+      border-radius: 6px;
+      padding: 5px 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .soft i { font-size: 14px; color: #185FA5; }
+
+    /* ── Print / PDF Optimization ── */
+    @media print {
+      body { background: white; padding: 0; margin: 0; font-size: 11pt; }
+      .cv { box-shadow: none; border-radius: 0; padding: 0; max-width: 100%; margin: 0; }
+      a { color: inherit; text-decoration: none; }
+      .job, .cert-card, .two-col { page-break-inside: avoid; break-inside: avoid; }
+      .header { page-break-after: avoid; break-after: avoid; }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 540px) {
+      .header { grid-template-columns: 1fr; }
+      .contact { text-align: left; }
+      .contact a, .contact span { justify-content: flex-start; }
+      .name { font-size: 1.6rem; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv">
+
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <div class="name">Mbogo Kategile Zabron</div>
+        <span class="role-tag">Data Analysis &amp; Programme Support</span>
+      </div>
+      <div class="contact">
+        <span><i class="ti ti-map-pin"></i> Geita, Tanzania</span>
+        <a href="mailto:shevijeremiah@gmail.com"><i class="ti ti-mail"></i> shevijeremiah@gmail.com</a>
+        <a href="tel:+255693446111"><i class="ti ti-phone"></i> +255 693 446 111</a>
+        <a href="https://github.com/SHEVISANTOS" target="_blank"><i class="ti ti-brand-github"></i> github.com/SHEVISANTOS</a>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        Analytical and adaptable <strong>ICT Professional</strong> with a strong foundation in data analysis, research, and security monitoring. Proven expertise in developing real-time dashboards, managing digital data collection systems, and producing comprehensive reports for evidence-based decision-making. Passionate about leveraging technical skills—including Python, PowerBI, and QGIS—to support international development, conflict analysis, and peacebuilding programmes. Adept at cross-cultural communication and committed to fostering inclusive, secure, and efficient operational environments.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <div class="section-title">Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">ICT Officer</span>
+          <span class="job-date">2021 – 2023</span>
+        </div>
+        <div class="job-org">Geita Town Council, Tanzania</div>
+        <ul>
+          <li>Manage network infrastructure and analyze operational data to produce detailed reports for senior management, supporting evidence-based decision-making.</li>
+          <li>Developed a real-time security monitoring dashboard, demonstrating strong capabilities in risk tracking and situational awareness—skills directly applicable to monitoring in-field team security.</li>
+          <li>Liaise with diverse internal and external stakeholders to deliver ICT training and technical support, fostering inclusive communication and capacity building.</li>
+          <li>Designed and deployed automated backup systems, ensuring 99.99% data integrity and operational continuity.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">ICT Intern</span>
+          <span class="job-date">2020 – 2021</span>
+        </div>
+        <div class="job-org">Russeta Technologies</div>
+        <ul>
+          <li>Assisted senior engineers in network configuration, troubleshooting, and client-site deployments across multiple projects.</li>
+          <li>Maintained project documentation and liaised with clients to gather requirements, ensuring technical solutions met operational needs.</li>
+          <li>Gained hands-on experience with routing and switching implementations in production environments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education + Certifications -->
+    <div class="two-col">
+      <section>
+        <div class="section-title">Education</div>
+        <div class="job">
+          <div class="job-title" style="font-size:14px;">BSc Information &amp; Communication Technology</div>
+          <div class="job-org" style="margin-top:4px;">Mbeya University of Science and Technology</div>
+          <div style="font-size: 12px; color: #666; margin-top: 4px; font-style: italic;">Relevant Coursework: Research Methodologies, Data Analysis</div>
+          <div class="enrolled">
+            <i class="ti ti-clock"></i> Currently enrolled
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Certifications</div>
+        <div class="cert-card">
+          <i class="ti ti-network"></i>
+          <div>
+            <div class="cert-name">CCNA</div>
+            <div class="cert-body">Cisco Certified Network Associate</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <i class="ti ti-certificate"></i>
+          <div>
+            <div class="cert-name">Higher Diploma</div>
+            <div class="cert-body">Routing, Remote Access &amp; Linux Management</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Languages -->
+    <section>
+      <div class="section-title">Languages</div>
+      <div class="soft-grid">
+        <span class="soft"><i class="ti ti-language"></i> Swahili (Native)</span>
+        <span class="soft"><i class="ti ti-language"></i> English (Professional Working Proficiency)</span>
+        <span class="soft"><i class="ti ti-language"></i> Spanish (Basic Understanding)</span>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <span class="skill">Data Analysis &amp; Reporting</span>
+        <span class="skill">Excel &amp; PowerBI</span>
+        <span class="skill">QGIS &amp; Mapping</span>
+        <span class="skill">Python Automation</span>
+        <span class="skill">Security Monitoring</span>
+        <span class="skill">Kobo Collect</span>
+        <span class="skill">Research &amp; Analysis</span>
+        <span class="skill">Web Content</span>
+      </div>
+    </section>
+
+    <!-- Professional Attributes -->
+    <section>
+      <div class="section-title">Professional Attributes</div>
+      <div class="soft-grid">
+        <span class="soft"><i class="ti ti-brain"></i> Analytical thinking</span>
+        <span class="soft"><i class="ti ti-globe"></i> Cross-cultural communication</span>
+        <span class="soft"><i class="ti ti-refresh"></i> Adaptability &amp; humility</span>
+        <span class="soft"><i class="ti ti-calendar-check"></i> Time management</span>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
