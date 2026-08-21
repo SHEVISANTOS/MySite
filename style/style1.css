@@ -481,7 +481,7 @@ header.sticky .main-nav {
 }
 
 .about-img-container::before {
-    content: '';
+    content: fit-content;
     position: absolute;
     top: 20px;
     left: -20px;
