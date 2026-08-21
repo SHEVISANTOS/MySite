@@ -500,7 +500,7 @@ header.sticky .main-nav {
 
 .about-img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: auto;
     object-fit: cover;
     border-radius: 40px;
     box-shadow: var(--card-shadow);
