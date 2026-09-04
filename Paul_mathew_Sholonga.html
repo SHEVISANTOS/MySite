@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Mathew Sholonga — BSc Chemistry Graduate CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            line-height: 1.35;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            max-height: 297mm;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 22px 26px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #003d7a;
+            letter-spacing: -0.3px;
+            line-height: 1.1;
+        }
+
+        .title {
+            font-size: 13.5px;
+            color: #003d7a;
+            font-weight: 600;
+            margin-top: 4px;
+            letter-spacing: 0.2px;
+        }
+
+        .contact-line {
+            font-size: 11px;
+            color: #555;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .contact-line a {
+            color: #003d7a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .placeholder {
+            color: #111111;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        /* Section styling */
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #003d7a;
+            border-bottom: 2px solid #003d7a;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            margin-top: 12px;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .summary-text {
+            font-size: 11px;
+            color: #333;
+            line-height: 1.45;
+            text-align: justify;
+        }
+
+        /* Two column layout */
+        .two-col {
+            display: flex;
+            gap: 22px;
+            margin-top: 10px;
+        }
+
+        .col-left {
+            flex: 1.35;
+        }
+
+        .col-right {
+            flex: 1;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 8px;
+        }
+
+        .exp-header {
+            margin-bottom: 2px;
+        }
+
+        .exp-role {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .exp-company {
+            font-size: 11px;
+            color: #555;
+            display: inline;
+        }
+
+        .exp-date {
+            font-size: 10.5px;
+            color: #777;
+            display: inline;
+        }
+
+        .exp-list {
+            list-style: disc;
+            padding-left: 16px;
+            margin-top: 3px;
+        }
+
+        .exp-list li {
+            font-size: 10.5px;
+            color: #333;
+            margin-bottom: 1px;
+            line-height: 1.4;
+        }
+
+        /* Skills */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skill-tag {
+            background: #e8f0f8;
+            color: #003d7a;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .skill-list-sidebar {
+            list-style: disc;
+            padding-left: 16px;
+        }
+
+        .skill-list-sidebar li {
+            font-size: 10.5px;
+            color: #333;
+            margin-bottom: 2px;
+            line-height: 1.35;
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 8px;
+        }
+
+        .edu-degree {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.25;
+        }
+
+        .edu-school {
+            font-size: 10.5px;
+            color: #555;
+            line-height: 1.25;
+        }
+
+        .edu-year {
+            font-size: 10px;
+            color: #777;
+        }
+
+        /* Languages */
+        .lang-line {
+            font-size: 10.5px;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .lang-name {
+            font-weight: 600;
+        }
+
+        /* Attributes / Strengths */
+        .attributes {
+            font-size: 10.5px;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .attributes strong {
+            color: #003d7a;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                padding: 22px 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">Paul Mathew Sholonga</h1>
+            <div class="title">BSc Chemistry Graduate | Laboratory Technician | Research Assistant</div>
+            <div class="contact-line">
+                Tanzania | +255 676 205 121 | <a href="mailto:Sholonga017@gmail.com">Sholonga017@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section-title">Professional Summary</div>
+        <p class="summary-text">
+            A motivated and detail-oriented <strong>Bachelor of Science in Chemistry graduate</strong> with a strong foundation in laboratory techniques, chemical analysis, scientific research, and laboratory safety. Possesses the ability to conduct experiments, prepare and analyze samples, maintain laboratory equipment, record results accurately, and follow standard laboratory procedures. Seeking an opportunity as a <strong>Laboratory Technician or Research Assistant</strong> where I can apply my scientific knowledge, develop practical skills, and contribute effectively to industrial or academic research.
+        </p>
+
+        <!-- Two Column Layout -->
+        <div class="two-col">
+            <!-- Left Column -->
+            <div class="col-left">
+                <div class="section-title">Professional Experience</div>
+                
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Laboratory Intern / Student Trainee</span>
+                    </div>
+                    <div>
+                        <span class="exp-company"><span class="placeholder">BOTTLING PLANT @SUMAJKT.CO.TZ</span></span>
+                        <span class="exp-date"> (<span class="placeholder">July 2024 – October 2024</span>)</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Assisted in conducting laboratory experiments and chemical analyses.</li>
+                        <li>Prepared samples, solutions, and reagents according to laboratory procedures.</li>
+                        <li>Operated and maintained laboratory equipment under supervision.</li>
+                        <li>Recorded laboratory observations and experimental results accurately.</li>
+                        <li>Followed laboratory safety procedures and chemical handling guidelines.</li>
+                        <li>Assisted with data analysis and preparation of laboratory reports.</li>
+                        <li>Worked collaboratively with laboratory staff during experiments and research activities.</li>
+                    </ul>
+                </div>
+
+                <div class="section-title">Research Project</div>
+                <p class="summary-text" style="margin-bottom:4px;">
+                    <strong>Title:</strong> <span class="placeholder">ASSESING HEAVY METAL POLLUTION ASSESSMENT IN SEDIMENTS ALONG THE LUPA RIVER AT MTANILA, CHUNYA, MBEYA REGION, TANZANIA</span>
+                </p>
+                <ul class="exp-list">
+                    <li>Conducted comprehensive literature review related to the research topic.</li>
+                    <li>Developed and followed appropriate experimental procedures.</li>
+                    <li>Collected and analyzed laboratory data systematically.</li>
+                    <li>Interpreted experimental findings and drew valid conclusions.</li>
+                    <li>Prepared and presented the final research report.</li>
+                </ul>
+
+                <div class="section-title">Career Objective</div>
+                <p class="summary-text">
+                    To obtain a challenging position as a <strong>Laboratory Technician or Research Assistant</strong> in an industrial, academic, environmental, pharmaceutical, food, or chemical laboratory where I can utilize my knowledge of chemistry, laboratory analysis, research methods, and scientific principles while contributing to accurate and reliable laboratory results.
+                </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-right">
+                <div class="section-title">Technical &amp; Laboratory Skills</div>
+                <div class="skill-tags" style="margin-bottom:8px;">
+                    <span class="skill-tag">Sample Preparation</span>
+                    <span class="skill-tag">Qualitative Analysis</span>
+                    <span class="skill-tag">Quantitative Analysis</span>
+                    <span class="skill-tag">Equipment Handling</span>
+                    <span class="skill-tag">Solution Preparation</span>
+                    <span class="skill-tag">Titration</span>
+                    <span class="skill-tag">Volumetric Analysis</span>
+                    <span class="skill-tag">Lab Safety</span>
+                    <span class="skill-tag">Quality Control</span>
+                    <span class="skill-tag">Data Recording</span>
+                    <span class="skill-tag">Report Writing</span>
+                </div>
+
+                <div class="section-title">Education</div>
+                <div class="edu-item">
+                    <div class="edu-degree">Bachelor of Science in Chemistry</div>
+                    <div class="edu-school">Mbeya University of Science and Technology — Mbeya</div>
+                    <div class="edu-year">Graduate 2026</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-degree">Advanced Certificate of Secondary Education</div>
+                    <div class="edu-school"><span class="placeholder">Rusomo High School</span> — Kigoma</div>
+                    <div class="edu-year"><span class="placeholder">2023</span></div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-degree">Certificate of Secondary Education</div>
+                    <div class="edu-school"><span class="placeholder">Kivukoni Secondary School</span> — Geita</div>
+                    <div class="edu-year"><span class="placeholder">2020</span></div>
+                </div>
+
+                <div class="section-title">Research &amp; Analytical Skills</div>
+                <ul class="skill-list-sidebar">
+                    <li>Experimental design</li>
+                    <li>Data collection and analysis</li>
+                    <li>Interpretation of laboratory results</li>
+                    <li>Scientific documentation</li>
+                    <li>Problem-solving</li>
+                    <li>Research methodology</li>
+                    <li>Presentation of scientific findings</li>
+                    <li>Attention to detail and accuracy</li>
+                </ul>
+
+                <div class="section-title">Languages</div>
+                <div class="lang-line"><span class="lang-name">English</span> — Best</div>
+                <div class="lang-line"><span class="lang-name">Kiswahili</span> — Excellent</div>
+
+                <div class="section-title">Computer Skills</div>
+                <ul class="skill-list-sidebar">
+                    <li>Microsoft Word, Excel, PowerPoint</li>
+                    <li>Internet and online research</li>
+                    <li>Data entry and management</li>
+                    <li>Basic statistical / data analysis</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="section-title">Professional Strengths</div>
+        <div class="attributes">
+            <strong>Problem Solving</strong> • <strong>Teamwork</strong> • <strong>Communication</strong> • <strong>Organization</strong> • <strong>Time Management</strong> • <strong>Critical Thinking</strong> • <strong>Adaptability</strong> • <strong>Attention to Detail</strong> • <strong>Independent Work</strong> • <strong>Lab Discipline</strong> • <strong>Safety Compliance</strong> • <strong>Willingness to Learn</strong>
+        </div>
+    </div>
+</body>
+</html>
