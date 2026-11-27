@@ -780,6 +780,16 @@ header.sticky .main-nav {
     transition: var(--transition);
 }
 
+.skill-icon-box i {
+    font-size: 30px;
+    color: var(--gold-primary);
+    transition: var(--transition);
+}
+
+.skill-card:hover .skill-icon-box i {
+    color: #000;
+}
+
 .skill-card:hover .skill-icon-box {
     background: var(--accent-gold);
     border-color: transparent;
