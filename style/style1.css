@@ -1653,3 +1653,8 @@ footer p {
     .lightbox { padding: 15px; }
     .lightbox-close { top: 15px; right: 15px; font-size: 2rem; }
 }
+/* Skill tags inside Core Expertise cards */
+.skills .project-tags {
+    justify-content: center;
+    margin-top: 20px;
+}
